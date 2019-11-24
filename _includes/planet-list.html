@@ -1,0 +1,14 @@
+<ul>
+        {% for planet in site.pages %} <!-- we go through all the pages in the site and put it in the variable planet-->
+            {% if planet.type == include.type %}<!-- then we compare the pages stored in planet if its type is include.type (sent information about type where it called this include html) then -->
+                <li>
+                    <a href="{{site.baseurl}}{{planet.url}}">
+                    <img src="{{site.baseurl}}/img/planets/{{planet.image}}" alt="Photo of {{planet.title}}">
+                       {{planet.title}}<!--then we printout title-->
+                   </a>
+                 <p>{{planet.meta}}</p>
+                
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>

@@ -1,0 +1,11 @@
+- title: Dwarf
+  folder: dwarf
+  content: 'a **dwarf planet** is a planetary-mass object that is neither'
+
+- title: Gas Giant
+  content: 'a **gasgiant planet** is a planetary-mass object that is neither'
+  folder: gas-giant
+
+- title: Terrestrial
+  content: 'a **Terrestrial planet** is a planetary-mass object that is neither'
+  folder: terrestrial

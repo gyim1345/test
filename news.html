@@ -1,0 +1,14 @@
+---
+layout: news
+---
+
+<h1>News</h1>
+
+<ul>
+    {% for anyvariable in site.categories.news %}
+      <li>
+        <a href="{{site.baseurl}}{{anyvariable.url}}">{{anyvariable.title}}</a>
+        <p>{{anyvariable.meta}}</p>
+      </li>
+    {% endfor %}
+</ul>

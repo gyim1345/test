@@ -1,11 +1,30 @@
-<!Doctype html>
-<html lang="en-ca">
-<head>
-    <meta charset=utf-8">
-    <title>Planets of the Universe</title>
-</head>
-<body>
+---
+layout: default
+---
 
     <h1>Planets of the Universe</h1>
-</body>
-</html>
+    <p>A planet is an astronomical object orbiting a star or stellar emnant that...</p>
+    <ol><!-- change li to numbers --> <!-- for planet in site.categories.planet-type -->
+  {% for planet in site.data.planet-types %}
+      <li><!-- put dot in front of the title-->
+        <a href="{{site.baseurl}}/planets/{{planet.folder}}/">{{planet.title}}</a>
+        {{planet.content | markdownify}}<!-- yaml is not mark down so you need to add markdownify to make the markdown text in the content to work as a markdown-->
+      </li>
+     {% endfor %}
+</ol>
+
+    <h2>Recently Discovered Planets</h2>
+
+    <ul>
+            {% for news in site.categories.recently-discovered limit:2 %}
+              <li>
+                <a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
+                <p>{{news.meta}}</p>
+              </li>
+            {% endfor %}
+        </ul>
+    
+    
+    
+    
+
